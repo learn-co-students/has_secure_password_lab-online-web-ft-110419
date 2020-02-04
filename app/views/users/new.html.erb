@@ -1,0 +1,14 @@
+<h1>Users#new</h1>
+
+<%= from_for @user do |f| %>
+    <%= f.lable :name %>
+    <%= f.text_field :name %>
+
+    <%= f.lable :password %>
+    <%= f.password_field :password %>
+
+    <%= f.lable %>
+    <%= f.password_field :password_confirmation%>
+    
+    <%= f.submit %>
+<%end%>
