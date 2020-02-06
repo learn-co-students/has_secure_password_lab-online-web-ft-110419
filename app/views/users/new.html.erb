@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+	<% if @errors %>
+		<h3>You need to change some things before we can sign you up. Here are the errors you got:</h3>
+		<ol>
+		<% @errors.full_messages.each do |m| %>
+			<li><%= m %></li>
+		<% end %>
+	</ol>
+	<% end %>
+
+	<%= form_for :user do |f| %>
+		<p><%= f.label :name, "Username:" %>
+		<%= f.text_field :name %></p>
+		<p><%= f.label :password, "Password:" %>
+		<%= f.password_field :password %></p>
+		<p><%= f.label :password_confirmation, "Confirm Password:" %>
+		<%= f.password_field :password_confirmation %></p>
+		<p><%= f.submit "Sign Up" %></p>
+	<% end %>
