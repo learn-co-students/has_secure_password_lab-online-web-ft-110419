@@ -1,0 +1,7 @@
+<% if @user %>
+	<h1>Hi, <%= @user.name %></h1>
+	<p><%= form_tag "/logout", method: :delete %>
+		<%= submit_tag "Logout" %></p>
+<% else %>
+	<h1><%= link_to("Please Log In", login_path) %></h1>
+<% end %>
